@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/creationix/step#readme"
-
-    >step (v1.0.0)</a>
+    <a href="https://github.com/creationix/step#readme">step (v1.0.0)</a>
 </h1>
 <h4>A simple control-flow library for node.JS that makes parallel execution, serial execution, and error handling painless.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.step">module step</a><ol>
 
@@ -133,7 +126,7 @@
   var steps = Array.prototype.slice.call(arguments),
       pending, counter, results, lock;
 
-  // Define the main callback that&#x27;s given as `this` to the steps.
+  // Define the main callback that's given as `this` to the steps.
   function next() {
     counter = pending = 0;
 
@@ -150,7 +143,7 @@
     var fn = steps.shift();
     results = [];
 
-    // Run the step in a try..catch block so exceptions don&#x27;t get out of hand.
+    // Run the step in a try..catch block so exceptions don't get out of hand.
     try {
       lock = true;
       var result = fn.apply(next, arguments);
@@ -159,7 +152,7 @@
       next(e);
     }
 
-    if (counter &#x3e; 0 &#x26;&#x26; pending == 0) {
+    if (counter &gt; 0 &amp;&amp; pending == 0) {
       // If parallel() was called, and all parallel branches executed
       // synchronously, go on to the next step immediately.
       next.apply(null, results);
@@ -183,7 +176,7 @@
       }
       // Send the other results as arguments
       results[index] = arguments[1];
-      if (!lock &#x26;&#x26; pending === 0) {
+      if (!lock &amp;&amp; pending === 0) {
         // When all parallel branches done, call the callback
         next.apply(null, results);
       }
@@ -249,7 +242,7 @@
     }].concat(steps);
 
     // If the last arg is a function add it as a last step
-    if (typeof args[args.length-1] === &#x27;function&#x27;) {
+    if (typeof args[args.length-1] === 'function') {
       toRun.push(args.pop());
     }
 
@@ -300,7 +293,7 @@
     }].concat(steps);
 
     // If the last arg is a function add it as a last step
-    if (typeof args[args.length-1] === &#x27;function&#x27;) {
+    if (typeof args[args.length-1] === 'function') {
       toRun.push(args.pop());
     }
 
@@ -338,3 +331,4 @@
     ]
 </div>
 </div>
+</body></html>
