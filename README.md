@@ -1,4 +1,7 @@
-# api documentation for  [step (v1.0.0)](https://github.com/creationix/step#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-step.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-step) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-step.svg)](https://travis-ci.org/npmdoc/node-npmdoc-step)
+# npmdoc-step
+
+#### basic api documentation for  [step (v1.0.0)](https://github.com/creationix/step#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-step.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-step) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-step.svg)](https://travis-ci.org/npmdoc/node-npmdoc-step)
+
 #### A simple control-flow library for node.JS that makes parallel execution, serial execution, and error handling painless.
 
 [![NPM](https://nodei.co/npm/step.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/step)
@@ -51,7 +54,8 @@
         "url": "git+ssh://git@github.com/creationix/step.git"
     },
     "scripts": {},
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "bin": {}
 }
 ```
 
