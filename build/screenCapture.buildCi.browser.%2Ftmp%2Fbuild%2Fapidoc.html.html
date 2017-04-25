@@ -72,41 +72,6 @@
 
         </li>
 
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.step.toString">
-            function <span class="apidocSignatureSpan">step.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.step.fn">module step.fn</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.step.fn.fn">
-            function <span class="apidocSignatureSpan">step.</span>fn
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.step.toString">module step.toString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.step.toString.toString">
-            function <span class="apidocSignatureSpan">step.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
     </ol></li>
 
 </ol></div>
@@ -250,75 +215,6 @@
     Step.apply(null, toRun);
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.step.toString" id="apidoc.element.step.toString">
-        function <span class="apidocSignatureSpan">step.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.step.fn" id="apidoc.module.step.fn">module step.fn</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.step.fn.fn" id="apidoc.element.step.fn.fn">
-        function <span class="apidocSignatureSpan">step.</span>fn
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function StepFn() {
-  var steps = Array.prototype.slice.call(arguments);
-  return function () {
-    var args = Array.prototype.slice.call(arguments);
-
-    // Insert a first step that primes the data stream
-    var toRun = [function () {
-      this.apply(null, args);
-    }].concat(steps);
-
-    // If the last arg is a function add it as a last step
-    if (typeof args[args.length-1] === 'function') {
-      toRun.push(args.pop());
-    }
-
-
-    Step.apply(null, toRun);
-  }
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.step.toString" id="apidoc.module.step.toString">module step.toString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.step.toString.toString" id="apidoc.element.step.toString.toString">
-        function <span class="apidocSignatureSpan">step.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
